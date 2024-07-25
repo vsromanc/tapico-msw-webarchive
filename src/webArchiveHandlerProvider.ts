@@ -1,5 +1,5 @@
 import { HttpHandler } from 'msw'
-import { SetupWorker } from 'msw/browser'
+import { SetupServer } from 'msw/node'
 import {
   ServerDefinitionOptions,
   createRequestHandler,
@@ -15,7 +15,7 @@ import {
  * @param options         the options
  */
 export function setRequestHandlersByWebarchive(
-  serverInstance: SetupWorker,
+  serverInstance: SetupServer,
   definitions: Record<string, any>,
   options?: ServerDefinitionOptions
 ) {
